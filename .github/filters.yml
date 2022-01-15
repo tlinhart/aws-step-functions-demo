@@ -1,0 +1,5 @@
+test-context:
+  - 'pyproject.toml'
+  - '.flake8'
+  - '**/requirements.txt'
+  - '**/*.py'

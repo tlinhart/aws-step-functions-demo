@@ -1,0 +1,38 @@
+name: CI
+on:
+  push:
+    branches:
+      - '**'
+jobs:
+  setup:
+    name: Set up workflow
+    runs-on: ubuntu-latest
+    outputs:
+      run-test: ${{ steps.changes.outputs.test-context }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Check for changes
+        id: changes
+        uses: dorny/paths-filter@v2
+        with:
+          filters: .github/filters.yml
+  test:
+    name: Run tests
+    needs: setup
+    if: ${{ needs.setup.outputs.run-test == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install dependencies
+        run: |
+          pip install black flake8
+      - name: Check formatting with Black
+        run: |
+          black --check --diff .
+      - name: Lint with Flake8
+        run: |
+          flake8 . --statistics
