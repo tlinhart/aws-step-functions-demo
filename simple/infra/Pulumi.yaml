@@ -1,0 +1,8 @@
+name: sfn-demo-simple
+description: Simple AWS Step Functions demo
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+options:
+  refresh: always
