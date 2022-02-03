@@ -1,0 +1,13 @@
+{
+  "trip_id": "f70e8f40-8925-43bf-8a6a-e16c929b2102",
+  "depart": "Prague",
+  "depart_at": "2022-01-29T08:00:00.000",
+  "arrive": "London",
+  "arrive_at": "2022-01-29T10:15:00.000",
+  "hotel": "Holiday Inn",
+  "check_in": "2022-01-29T14:00:00.000",
+  "check_out": "2022-01-30T10:00:00.000",
+  "rental": "Jaguar",
+  "rental_from": "2022-01-29T10:30:00.000",
+  "rental_to": "2022-01-30T10:30:00.000"
+}

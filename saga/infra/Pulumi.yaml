@@ -1,0 +1,31 @@
+name: sfn-demo-saga
+description: Saga pattern demo using AWS Step Functions
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+options:
+  refresh: always
+template:
+  config:
+    aws:region:
+      description: AWS region to deploy to
+      default: eu-central-1
+    book_hotel_fail_rate:
+      description: Fail rate for booking the hotel
+      default: 0.1
+    book_flight_fail_rate:
+      description: Fail rate for booking the flight
+      default: 0.1
+    book_car_fail_rate:
+      description: Fail rate for booking the car
+      default: 0.1
+    cancel_hotel_fail_rate:
+      description: Fail rate for cancelling the hotel booking
+      default: 0.1
+    cancel_flight_fail_rate:
+      description: Fail rate for cancelling the flight booking
+      default: 0.1
+    cancel_car_fail_rate:
+      description: Fail rate for cancelling the car booking
+      default: 0.1
