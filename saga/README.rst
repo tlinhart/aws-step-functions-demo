@@ -15,6 +15,24 @@ limit the retries to a high but finite number.
 To simulate various failure scenarios, it's possible to configure failure rate
 for individual operations via Pulumi stack configuration (see below).
 
+Execution Examples
+------------------
+
+Trip successfully booked:
+
+.. image:: docs/succeeded.svg
+   :alt: Trip booked
+
+Booking failed and the trip was cancelled:
+
+.. image:: docs/cancelled.svg
+   :alt: Trip cancelled
+
+Trip cancellation failed:
+
+.. image:: docs/cancel-failed.svg
+   :alt: Trip cancellation failed
+
 Deployment
 ==========
 
