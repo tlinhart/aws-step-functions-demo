@@ -1,3 +1,4 @@
+=================
 Saga Pattern Demo
 =================
 
@@ -16,7 +17,7 @@ To simulate various failure scenarios, it's possible to configure failure rate
 for individual operations via Pulumi stack configuration (see below).
 
 Execution Examples
-------------------
+==================
 
 Trip successfully booked:
 
